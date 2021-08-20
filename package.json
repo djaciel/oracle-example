@@ -1,0 +1,25 @@
+{
+  "name": "ethoracleprice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:oracle": "cd oracle && npx truffle migrate --network extdev --reset -all && cd ..",
+    "deploy:caller": "cd caller && npx truffle migrate --network extdev --reset -all && cd ..",
+    "deploy:all": "npm run deploy:oracle && npm run deploy:caller"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.2.0",
+    "axios": "^0.21.1",
+    "bn.js": "^5.2.0",
+    "dotenv": "^10.0.0",
+    "loom-js": "^1.79.0",
+    "loom-truffle-provider": "^0.15.0",
+    "truffle": "^5.4.6",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
